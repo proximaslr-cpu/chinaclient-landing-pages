@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido para WhatsApp Business | ChinaLatam Hub</title>
+  <meta name="description" content="Producción mensual de contenido visual para WhatsApp Business. Imágenes de producto, videos de fábrica, catálogos digitales y automatización de flujos.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-primary:#0a2540; --color-primary-light:#143d66; --color-accent:#e67e22; --color-accent-dark:#d35400; --color-bg:#f8f9fa; --color-white:#ffffff; --color-text:#2c3e50; --color-text-light:#5a6c7d; --color-border:#e2e8f0; --color-wa:#25d366; --shadow-sm:0 1px 2px rgba(0,0,0,0.05); --shadow-md:0 4px 6px -1px rgba(0,0,0,0.1); --shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1); --radius:8px; --radius-lg:12px; --max-width:1200px; --transition:all 0.3s ease; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter',-apple-system,sans-serif; color:var(--color-text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    .container { width:100%; max-width:var(--max-width); margin:0 auto; padding:0 24px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:14px 32px; border-radius:var(--radius); font-weight:600; font-size:1rem; cursor:pointer; border:none; transition:var(--transition); gap:8px; }
+    .btn-primary { background:var(--color-accent); color:var(--color-white); box-shadow:0 4px 14px rgba(230,126,34,0.35); }
+    .btn-primary:hover { background:var(--color-accent-dark); transform:translateY(-2px); }
+    .btn-wa { background:var(--color-wa); color:var(--color-white); box-shadow:0 4px 14px rgba(37,211,102,0.3); }
+    .btn-wa:hover { background:#1ebe57; transform:translateY(-2px); }
+    .btn-outline { background:transparent; color:var(--color-primary); border:2px solid var(--color-primary); }
+    .btn-outline:hover { background:var(--color-primary); color:var(--color-white); }
+    .btn-large { padding:16px 40px; font-size:1.1rem; }
+    .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(10,37,64,0.95); backdrop-filter:blur(10px); border-bottom:1px solid rgba(255,255,255,0.05); }
+    .navbar .container { display:flex; align-items:center; justify-content:space-between; height:72px; }
+    .logo { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--color-white); font-weight:700; }
+    .logo span { color:var(--color-accent); }
+    .nav-links { display:flex; gap:28px; list-style:none; align-items:center; }
+    .nav-links a { color:rgba(255,255,255,0.85); font-size:0.9rem; font-weight:500; }
+    .nav-links a:hover { color:var(--color-accent); }
+    .nav-links .active { color:var(--color-accent); }
+    .mobile-menu-btn { display:none; background:none; border:none; color:var(--color-white); font-size:1.5rem; cursor:pointer; }
+    .hero { position:relative; min-height:85vh; display:flex; align-items:center; background:linear-gradient(135deg,#128c7e 0%,#075e54 40%,var(--color-primary) 100%); padding-top:72px; }
+    .hero::before { content:''; position:absolute; top:-30%; right:-10%; width:60%; height:120%; background:radial-gradient(circle,rgba(37,211,102,0.1) 0%,transparent 70%); pointer-events:none; }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .hero-content { position:relative; z-index:2; }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(37,211,102,0.15); color:#25d366; padding:8px 16px; border-radius:100px; font-size:0.85rem; font-weight:600; margin-bottom:24px; border:1px solid rgba(37,211,102,0.25); }
+    .hero h1 { font-size:2.8rem; color:var(--color-white); margin-bottom:20px; }
+    .hero h1 .highlight { color:#25d366; }
+    .hero p { font-size:1.15rem; color:rgba(255,255,255,0.8); margin-bottom:32px; max-width:520px; }
+    .hero-buttons { display:flex; gap:16px; flex-wrap:wrap; }
+    .hero-stat .number { font-size:1.8rem; font-weight:700; color:#25d366; }
+    .hero-stat .label { font-size:0.8rem; color:rgba(255,255,255,0.6); }
+    .hero-stats { display:flex; gap:40px; margin-top:40px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.1); }
+    .section { padding:80px 0; }
+    .section-header { text-align:center; max-width:700px; margin:0 auto 56px; }
+    .section-label { display:inline-block; color:var(--color-accent); font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; }
+    .section-title { font-size:2.2rem; color:var(--color-primary); margin-bottom:14px; }
+    .section-subtitle { font-size:1.05rem; color:var(--color-text-light); }
+    .bg-light { background:var(--color-bg); }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+    .service-card { background:var(--color-white); border-radius:var(--radius-lg); padding:32px; border:1px solid var(--color-border); transition:var(--transition); }
+    .service-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:#25d366; }
+    .service-icon { width:50px; height:50px; background:linear-gradient(135deg,#25d366,#128c7e); border-radius:var(--radius); display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:16px; color:var(--color-white); }
+    .service-card h3 { font-size:1.15rem; color:var(--color-primary); margin-bottom:8px; }
+    .service-card p { font-size:0.9rem; color:var(--color-text-light); margin-bottom:12px; }
+    .pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+    .pricing-card { background:var(--color-white); border-radius:var(--radius-lg); padding:36px; border:1px solid var(--color-border); text-align:center; position:relative; }
+    .pricing-card.featured { border:2px solid var(--color-accent); transform:scale(1.02); }
+    .pricing-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--color-accent); color:var(--color-white); padding:4px 16px; border-radius:100px; font-size:0.75rem; font-weight:600; }
+    .pricing-name { font-size:1.3rem; font-weight:700; color:var(--color-primary); margin-bottom:8px; }
+    .pricing-price { font-size:2.2rem; font-weight:700; color:var(--color-accent); margin-bottom:4px; }
+    .pricing-period { font-size:0.85rem; color:var(--color-text-light); margin-bottom:20px; }
+    .pricing-features { list-style:none; text-align:left; font-size:0.9rem; color:var(--color-text-light); }
+    .pricing-features li { padding:8px 0; border-bottom:1px solid var(--color-border); display:flex; align-items:center; gap:8px; }
+    .pricing-features li::before { content:'✓'; color:var(--color-success); font-weight:700; }
+    .tag { display:inline-block; background:var(--color-bg); color:var(--color-text-light); padding:3px 10px; border-radius:100px; font-size:0.75rem; font-weight:500; margin-right:4px; }
+    .cta-box { background:linear-gradient(135deg,var(--color-primary),var(--color-primary-light)); border-radius:var(--radius-lg); padding:56px; text-align:center; }
+    .cta-box h2 { color:var(--color-white); font-size:1.9rem; margin-bottom:12px; }
+    .cta-box p { color:rgba(255,255,255,0.75); margin-bottom:28px; }
+    .whatsapp-cta { display:inline-flex; align-items:center; gap:10px; background:#25d366; color:var(--color-white); padding:16px 32px; border-radius:var(--radius); font-weight:600; font-size:1.1rem; box-shadow:0 4px 14px rgba(37,211,102,0.3); transition:var(--transition); }
+    .whatsapp-cta:hover { background:#1ebe57; transform:translateY(-2px); }
+    .footer { background:#071524; color:rgba(255,255,255,0.6); padding:50px 0 20px; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+    .footer-brand .logo { margin-bottom:12px; display:inline-block; }
+    .footer-brand p { font-size:0.85rem; line-height:1.6; max-width:280px; }
+    .footer-col h4 { color:var(--color-white); font-size:0.9rem; margin-bottom:16px; }
+    .footer-col ul { list-style:none; }
+    .footer-col li { margin-bottom:8px; }
+    .footer-col a { font-size:0.85rem; }
+    .footer-col a:hover { color:var(--color-accent); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding-top:20px; display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; }
+    @media (max-width:1024px) { .hero-grid { grid-template-columns:1fr; gap:40px; } .hero h1 { font-size:2.2rem; } .footer-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:768px) { .nav-links { display:none; } .mobile-menu-btn { display:block; } .hero { min-height:auto; padding:100px 0 50px; } .section { padding:50px 0; } .section-title { font-size:1.7rem; } .footer-grid { grid-template-columns:1fr; gap:28px; } .cta-box { padding:36px 24px; } .pricing-card.featured { transform:none; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">China<span>Latam</span> Hub</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sourcing-b2b.html">Sourcing B2B</a></li>
+        <li><a href="energia-solar.html">Energía Solar</a></li>
+        <li><a href="electrolineras.html">Electrolineras</a></li>
+        <li><a href="almacenamiento-energia.html">Almacenamiento</a></li>
+        <li><a href="whatsapp-marketing.html" class="active">WhatsApp</a></li>
+        <li><a href="index.html#contacto" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">Cotizar</a></li>
+      </ul>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">Contenido WhatsApp</div>
+          <h1>Contenido para WhatsApp Business.<br><span class="highlight">Venta B2B.</span></h1>
+          <p>Producción mensual de contenido visual para distribución por WhatsApp Business. Imágenes de producto, videos de fábrica y mensajes por etapa de venta.</p>
+          <div class="hero-buttons">
+            <a href="#paquetes" class="btn btn-primary btn-large">Ver paquetes de contenido</a>
+            <a href="#servicios" class="btn btn-secondary btn-large" style="border:2px solid rgba(255,255,255,0.3);color:#fff;">Explorar servicios</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><div class="number">70%+</div><div class="label">Tasa de apertura WA</div></div>
+            <div class="hero-stat"><div class="number">20+</div><div class="label">Contenidos mensuales</div></div>
+            <div class="hero-stat"><div class="number">100%</div><div class="label">Hecho en China</div></div>
+          </div>
+        </div>
+        <div>
+          <div style="background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px;">
+            <div style="color:var(--color-white);font-size:1rem;font-weight:600;margin-bottom:14px;">Contenido del kit</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(37,211,102,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"></span> Imágenes profesionales de productos</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(37,211,102,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"></span> Videos cortos de fábricas en China</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(37,211,102,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">💬</span> Mensajes tipo por etapa del funnel</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(37,211,102,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"></span> Automatización de flujos WA Business</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Servicios</span>
+        <h2 class="section-title">Todo lo que necesitas para vender por WhatsApp</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Kit de Contenido Mensual</h3>
+          <p>Imágenes profesionales con specs, precios y MOQ. Diseñadas para lucir impecables en WhatsApp. Actualizadas con novedades de fábrica.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Videos de Fábrica</h3>
+          <p>Videos cortos (15-30s) de líneas de producción, control de calidad y contenedores cargados. Generan confianza como ninguna foto.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Catálogo Digital Interactivo</h3>
+          <p>PDF ligero con productos, precios FOB y botón de "Cotizar". Se comparte por WhatsApp y abre sin conexión.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Automatización WA Business</h3>
+          <p>Flujos automáticos: bienvenida, catálogo, seguimiento post-cotización, recordatorio. Ningún lead se pierde.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Broadcast Segmentado</h3>
+          <p>Envía campañas masivas a contactos segmentados por país, interés o etapa de compra. Sin spam, con precisión.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <h3>Asesoría de Ventas por Chat</h3>
+          <p>Entrenamos a tu equipo en el método de ventas B2B por WhatsApp: desde el primer mensaje hasta cerrar el pedido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="paquetes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Paquetes</span>
+        <h2 class="section-title">Elige el plan según tu volumen de ventas</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Starter</div>
+          <div class="pricing-price">$XXX</div>
+          <div class="pricing-period">por mes</div>
+          <ul class="pricing-features">
+            <li>10 imágenes de producto</li>
+            <li>5 mensajes de texto tipo</li>
+            <li>1 catálogo PDF básico</li>
+            <li>Soporte por email</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline" style="width:100%;margin-top:20px;">Elegir Starter</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">MÁS POPULAR</div>
+          <div class="pricing-name">Pro</div>
+          <div class="pricing-price">$XXX</div>
+          <div class="pricing-period">por mes</div>
+          <ul class="pricing-features">
+            <li>20 imágenes de producto</li>
+            <li>5 videos cortos de fábrica</li>
+            <li>30 mensajes por etapa de funnel</li>
+            <li>1 catálogo PDF interactivo</li>
+            <li>Flujo automatizado WA Business</li>
+            <li>Reporte mensual de métricas</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary" style="width:100%;margin-top:20px;">Elegir Pro</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Enterprise</div>
+          <div class="pricing-price">Cotizar</div>
+          <div class="pricing-period">mensual</div>
+          <ul class="pricing-features">
+            <li>Todo lo del plan Pro</li>
+            <li>Broadcast mensual segmentado</li>
+            <li>Asesoría de ventas personalizada</li>
+            <li>Contenido bajo pedido ilimitado</li>
+            <li>Manager de cuenta dedicado</li>
+            <li>Prioridad en producción de videos</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline" style="width:100%;margin-top:20px;">Cotizar Enterprise</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ejemplos</span>
+        <h2 class="section-title">Tipos de contenido que producimos</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:24px;border:1px solid var(--color-border);">
+          <div style="font-size:1.8rem;margin-bottom:10px;">📋</div>
+          <div style="font-weight:600;color:var(--color-primary);margin-bottom:6px;">Ficha de Producto</div>
+          <div style="font-size:0.85rem;color:var(--color-text-light);">Imagen con foto, specs técnicas, precio FOB y MOQ. Lista para enviar.</div>
+        </div>
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:24px;border:1px solid var(--color-border);">
+          <div style="font-size:1.8rem;margin-bottom:10px;">🏭</div>
+          <div style="font-weight:600;color:var(--color-primary);margin-bottom:6px;">Video de Fábrica</div>
+          <div style="font-size:0.85rem;color:var(--color-text-light);">15-30 segundos de línea de producción o inspección de calidad.</div>
+        </div>
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:24px;border:1px solid var(--color-border);">
+          <div style="font-size:1.8rem;margin-bottom:10px;">📊</div>
+          <div style="font-weight:600;color:var(--color-primary);margin-bottom:6px;">Infografía Comparativa</div>
+          <div style="font-size:0.85rem;color:var(--color-text-light);">"Antes vs. Después" o "Nuestro producto vs. competencia".</div>
+        </div>
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:24px;border:1px solid var(--color-border);">
+          <div style="font-size:1.8rem;margin-bottom:10px;">🎉</div>
+          <div style="font-weight:600;color:var(--color-primary);margin-bottom:6px;">Promoción Flash</div>
+          <div style="font-size:0.85rem;color:var(--color-text-light);">"MOQ reducido esta semana" o "Descuento por contenedor completo".</div>
+        </div>
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:24px;border:1px solid var(--color-border);">
+          <div style="font-size:1.8rem;margin-bottom:10px;">📦</div>
+          <div style="font-weight:600;color:var(--color-primary);margin-bottom:6px;">Track Record</div>
+          <div style="font-size:0.85rem;color:var(--color-text-light);">"Contenedor #127 rumbo a Manzanillo". Fotos reales de embarque.</div>
+        </div>
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:24px;border:1px solid var(--color-border);">
+          <div style="font-size:1.8rem;margin-bottom:10px;">💡</div>
+          <div style="font-weight:600;color:var(--color-primary);margin-bottom:6px;">Contenido Educativo</div>
+          <div style="font-size:0.85rem;color:var(--color-text-light);">"Cómo calcular costos de importación" o "Pasos para importar desde China".</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Contratación de servicio</h2>
+        <p>Servicio mensual de producción de contenido. Periodo de prueba disponible.</p>
+        <a href="https://wa.me/8618826422530" target="_blank" class="whatsapp-cta">💬 Quiero mi kit de contenido</a>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:16px;">Respuesta en 24 horas hábiles</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">China<span>Latam</span> Hub</a>
+          <p>20 años conectando fábricas de China con Latinoamérica. Sourcing, energía solar, electrolineras y almacenamiento.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="sourcing-b2b.html">Sourcing B2B</a></li>
+            <li><a href="energia-solar.html">Energía Solar</a></li>
+            <li><a href="electrolineras.html">Electrolineras</a></li>
+            <li><a href="almacenamiento-energia.html">Almacenamiento</a></li>
+            <li><a href="whatsapp-marketing.html">WhatsApp Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/8618826422530" target="_blank">WhatsApp</a></li>
+            <li><a href="mailto:niko@cknenergi.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ChinaLatam Hub</span>
+        <span>WhatsApp Marketing · China → Latinoamérica</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

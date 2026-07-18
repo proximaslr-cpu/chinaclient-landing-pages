@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargadores DC & Electrolineras desde China | ChinaLatam Hub</title>
+  <meta name="description" content="Cargadores DC de 60kW a 360kW. Electrolineras turn-key con ingeniería, instalación y software de gestión OCPP.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-primary:#0a2540; --color-primary-light:#143d66; --color-accent:#e67e22; --color-accent-dark:#d35400; --color-bg:#f8f9fa; --color-white:#ffffff; --color-text:#2c3e50; --color-text-light:#5a6c7d; --color-border:#e2e8f0; --color-ev:#00a8e8; --shadow-sm:0 1px 2px rgba(0,0,0,0.05); --shadow-md:0 4px 6px -1px rgba(0,0,0,0.1); --shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1); --radius:8px; --radius-lg:12px; --max-width:1200px; --transition:all 0.3s ease; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter',-apple-system,sans-serif; color:var(--color-text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    .container { width:100%; max-width:var(--max-width); margin:0 auto; padding:0 24px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:14px 32px; border-radius:var(--radius); font-weight:600; font-size:1rem; cursor:pointer; border:none; transition:var(--transition); gap:8px; }
+    .btn-primary { background:var(--color-accent); color:var(--color-white); box-shadow:0 4px 14px rgba(230,126,34,0.35); }
+    .btn-primary:hover { background:var(--color-accent-dark); transform:translateY(-2px); }
+    .btn-outline { background:transparent; color:var(--color-primary); border:2px solid var(--color-primary); }
+    .btn-outline:hover { background:var(--color-primary); color:var(--color-white); }
+    .btn-large { padding:16px 40px; font-size:1.1rem; }
+    .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(10,37,64,0.95); backdrop-filter:blur(10px); border-bottom:1px solid rgba(255,255,255,0.05); }
+    .navbar .container { display:flex; align-items:center; justify-content:space-between; height:72px; }
+    .logo { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--color-white); font-weight:700; }
+    .logo span { color:var(--color-accent); }
+    .nav-links { display:flex; gap:28px; list-style:none; align-items:center; }
+    .nav-links a { color:rgba(255,255,255,0.85); font-size:0.9rem; font-weight:500; }
+    .nav-links a:hover { color:var(--color-accent); }
+    .nav-links .active { color:var(--color-accent); }
+    .mobile-menu-btn { display:none; background:none; border:none; color:var(--color-white); font-size:1.5rem; cursor:pointer; }
+    .hero { position:relative; min-height:85vh; display:flex; align-items:center; background:linear-gradient(135deg,#001524 0%,#003459 40%,var(--color-primary) 100%); padding-top:72px; }
+    .hero::before { content:''; position:absolute; top:-30%; right:-10%; width:60%; height:120%; background:radial-gradient(circle,rgba(0,168,232,0.12) 0%,transparent 70%); pointer-events:none; }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .hero-content { position:relative; z-index:2; }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(0,168,232,0.15); color:var(--color-ev); padding:8px 16px; border-radius:100px; font-size:0.85rem; font-weight:600; margin-bottom:24px; border:1px solid rgba(0,168,232,0.25); }
+    .hero h1 { font-size:2.8rem; color:var(--color-white); margin-bottom:20px; }
+    .hero h1 .highlight { color:var(--color-accent); }
+    .hero p { font-size:1.15rem; color:rgba(255,255,255,0.8); margin-bottom:32px; max-width:520px; }
+    .hero-buttons { display:flex; gap:16px; flex-wrap:wrap; }
+    .hero-stat .number { font-size:1.8rem; font-weight:700; color:var(--color-accent); }
+    .hero-stat .label { font-size:0.8rem; color:rgba(255,255,255,0.6); }
+    .hero-stats { display:flex; gap:40px; margin-top:40px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.1); }
+    .section { padding:80px 0; }
+    .section-header { text-align:center; max-width:700px; margin:0 auto 56px; }
+    .section-label { display:inline-block; color:var(--color-accent); font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; }
+    .section-title { font-size:2.2rem; color:var(--color-primary); margin-bottom:14px; }
+    .section-subtitle { font-size:1.05rem; color:var(--color-text-light); }
+    .bg-light { background:var(--color-bg); }
+    .products-table { width:100%; border-collapse:collapse; background:var(--color-white); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-sm); }
+    .products-table th { background:var(--color-primary); color:var(--color-white); padding:14px; text-align:left; font-weight:600; font-size:0.9rem; }
+    .products-table td { padding:12px 14px; border-bottom:1px solid var(--color-border); font-size:0.88rem; }
+    .products-table tr:hover { background:var(--color-bg); }
+    .tag { display:inline-block; background:var(--color-bg); color:var(--color-text-light); padding:3px 10px; border-radius:100px; font-size:0.75rem; font-weight:500; margin-right:4px; }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+    .service-card { background:var(--color-white); border-radius:var(--radius-lg); padding:32px; border:1px solid var(--color-border); transition:var(--transition); }
+    .service-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:var(--color-ev); }
+    .service-icon { width:50px; height:50px; background:linear-gradient(135deg,var(--color-ev),#0077b6); border-radius:var(--radius); display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:16px; color:var(--color-white); }
+    .service-card h3 { font-size:1.15rem; color:var(--color-primary); margin-bottom:8px; }
+    .service-card p { font-size:0.9rem; color:var(--color-text-light); margin-bottom:12px; }
+    .cta-box { background:linear-gradient(135deg,var(--color-primary),var(--color-primary-light)); border-radius:var(--radius-lg); padding:56px; text-align:center; }
+    .cta-box h2 { color:var(--color-white); font-size:1.9rem; margin-bottom:12px; }
+    .cta-box p { color:rgba(255,255,255,0.75); margin-bottom:28px; }
+    .whatsapp-cta { display:inline-flex; align-items:center; gap:10px; background:#25d366; color:var(--color-white); padding:16px 32px; border-radius:var(--radius); font-weight:600; font-size:1.1rem; box-shadow:0 4px 14px rgba(37,211,102,0.3); transition:var(--transition); }
+    .whatsapp-cta:hover { background:#1ebe57; transform:translateY(-2px); }
+    .footer { background:#071524; color:rgba(255,255,255,0.6); padding:50px 0 20px; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+    .footer-brand .logo { margin-bottom:12px; display:inline-block; }
+    .footer-brand p { font-size:0.85rem; line-height:1.6; max-width:280px; }
+    .footer-col h4 { color:var(--color-white); font-size:0.9rem; margin-bottom:16px; }
+    .footer-col ul { list-style:none; }
+    .footer-col li { margin-bottom:8px; }
+    .footer-col a { font-size:0.85rem; }
+    .footer-col a:hover { color:var(--color-accent); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding-top:20px; display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; }
+    @media (max-width:1024px) { .hero-grid { grid-template-columns:1fr; gap:40px; } .hero h1 { font-size:2.2rem; } .footer-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:768px) { .nav-links { display:none; } .mobile-menu-btn { display:block; } .hero { min-height:auto; padding:100px 0 50px; } .section { padding:50px 0; } .section-title { font-size:1.7rem; } .footer-grid { grid-template-columns:1fr; gap:28px; } .cta-box { padding:36px 24px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">China<span>Latam</span> Hub</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sourcing-b2b.html">Sourcing B2B</a></li>
+        <li><a href="energia-solar.html">Energía Solar</a></li>
+        <li><a href="electrolineras.html" class="active">Electrolineras</a></li>
+        <li><a href="almacenamiento-energia.html">Almacenamiento</a></li>
+        <li><a href="whatsapp-marketing.html">WhatsApp</a></li>
+        <li><a href="index.html#contacto" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">Cotizar</a></li>
+      </ul>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">Cargadores DC & Electrolineras</div>
+          <h1>Electrolineras y cargadores DC.<br><span class="highlight">Proyecto turn-key.</span></h1>
+          <p>Cargadores DC de 60kW a 360kW con certificación CE/UL. Software de gestión OCPP 1.6/2.0. Ingeniería, instalación y puesta en marcha incluidas.</p>
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary btn-large">Cotizar mi electrolinera</a>
+            <a href="#cargadores" class="btn btn-secondary btn-large" style="border:2px solid rgba(255,255,255,0.3);color:#fff;">Ver catálogo de cargadores</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><div class="number">60-360kW</div><div class="label">Rango de potencia</div></div>
+            <div class="hero-stat"><div class="number">OCPP</div><div class="label">Software gestión</div></div>
+            <div class="hero-stat"><div class="number">Turn-key</div><div class="label">Todo incluido</div></div>
+          </div>
+        </div>
+        <div>
+          <div style="background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px;">
+            <div style="color:var(--color-white);font-size:1rem;font-weight:600;margin-bottom:14px;">Servicios incluidos</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(0,168,232,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">⚡</span> Cargadores DC 60kW a 360kW</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(0,168,232,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🏗️</span> Electrolinera turn-key completa</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(0,168,232,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">📱</span> Software OCPP + app de pagos</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;color:rgba(255,255,255,0.75);font-size:0.88rem;"><span style="width:28px;height:28px;background:rgba(0,168,232,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🚗</span> Cargadores para flotas EV</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="cargadores">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Catálogo</span>
+        <h2 class="section-title">Cargadores DC por potencia y aplicación</h2>
+        <p class="section-subtitle">Todos con certificación CE. Disponibles con conectores CCS2, CHAdeMO o dual.</p>
+      </div>
+      <table class="products-table">
+        <thead>
+          <tr><th>Modelo</th><th>Potencia</th><th>Conectores</th><th>Tiempo de carga*</th><th>Aplicación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>DC-60</strong></td><td>60 kW</td><td>1x CCS2</td><td>40-60 min</td><td>Comercios, restaurantes, hoteles</td></tr>
+          <tr><td><strong>DC-120</strong></td><td>120 kW</td><td>1x CCS2 + 1x CHAdeMO</td><td>20-30 min</td><td>Electrolinera urbana estándar</td></tr>
+          <tr><td><strong>DC-180</strong></td><td>180 kW</td><td>2x CCS2</td><td>15-20 min</td><td>Electrolinera alta rotación</td></tr>
+          <tr><td><strong>DC-240</strong></td><td>240 kW</td><td>2x CCS2 + 1x CHAdeMO</td><td>10-15 min</td><td>Carretera, flotas ligeras</td></tr>
+          <tr><td><strong>DC-360</strong></td><td>360 kW</td><td>2x CCS2</td><td>8-12 min</td><td>Electrolinera premium, flotas pesadas</td></tr>
+        </tbody>
+      </table>
+      <p style="text-align:center;margin-top:14px;color:var(--color-text-light);font-size:0.8rem;">* Tiempo estimado para cargar del 20% al 80% en vehículo con batería de 60-80 kWh.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Servicios</span>
+        <h2 class="section-title">Soluciones para cada tipo de cliente</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Electrolinera Turn-key</h3>
+          <p>Diseño de ingeniería, suministro de equipos, instalación eléctrica, software OCPP, señalética y puesta en marcha. Tú eliges la ubicación, nosotros hacemos el resto.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Flotas Empresariales</h3>
+          <p>Cargadores en tu depósito o estacionamiento para flotas de delivery, transporte o servicios. Carga nocturna inteligente con menor costo por kWh.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">☀️</div>
+          <h3>Electrolinera + Solar</h3>
+          <p>Combina tu electrolinera con paneles solares y baterías. Los vehículos se cargan con energía limpia. Reduce costo operativo a largo plazo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Software OCPP + Pagos</h3>
+          <p>Plataforma de gestión compatible con OCPP 1.6 / 2.0.1. App para usuario final, pagos con tarjeta/QR, reportes de ingresos, monitoreo remoto.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>Consultoría y Permisos</h3>
+          <p>Tramitamos permisos de conexión eléctrica, estudios de carga y cumplimiento normativo. Conocemos NOM (México), RETIE (Colombia) y NEC (USA).</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Mantenimiento y Soporte</h3>
+          <p>Contratos de mantenimiento preventivo y correctivo. Soporte técnico remoto 24/7. Repuestos garantizados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Inversión</span>
+        <h2 class="section-title">¿Cuánto cuesta una electrolinera?</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:28px;border:1px solid var(--color-border);text-align:center;">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--color-primary);">4 puestos</div>
+          <div style="font-size:0.9rem;color:var(--color-text-light);margin-bottom:12px;">Electrolinera básica</div>
+          <div style="font-size:1.4rem;font-weight:700;color:var(--color-accent);">$XXX,XXX USD</div>
+          <div style="font-size:0.8rem;color:var(--color-text-light);margin-top:8px;">Incluye: ingeniería, 4 cargadores 120kW, transformador, software, instalación</div>
+        </div>
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:28px;border:1px solid var(--color-border);text-align:center;">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--color-primary);">8 puestos</div>
+          <div style="font-size:0.9rem;color:var(--color-text-light);margin-bottom:12px;">Electrolinera estándar</div>
+          <div style="font-size:1.4rem;font-weight:700;color:var(--color-accent);">$XXX,XXX USD</div>
+          <div style="font-size:0.8rem;color:var(--color-text-light);margin-top:8px;">Incluye: ingeniería, 8 cargadores 120-180kW, substación, software, instalación</div>
+        </div>
+        <div style="background:var(--color-white);border-radius:var(--radius);padding:28px;border:1px solid var(--color-border);text-align:center;">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--color-primary);">16+ puestos</div>
+          <div style="font-size:0.9rem;color:var(--color-text-light);margin-bottom:12px;">Electrolinera premium</div>
+          <div style="font-size:1.4rem;font-weight:700;color:var(--color-accent);">Cotizar</div>
+          <div style="font-size:0.8rem;color:var(--color-text-light);margin-top:8px;">Incluye: diseño a medida, cargadores 180-360kW, solar + BESS opcional</div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:20px;color:var(--color-text-light);font-size:0.85rem;">Los precios son referenciales. <a href="#contacto" style="color:var(--color-accent);font-weight:600;">Solicita una cotización personalizada</a> según tu ubicación y necesidad.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Cotización de electrolinera</h2>
+        <p>Envíe la ubicación, número de puestos de carga requeridos y tipo de conectores. Propuesta en 48 horas hábiles.</p>
+        <a href="https://wa.me/8618826422530" target="_blank" class="whatsapp-cta">💬 Cotizar electrolinera</a>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:16px;">También para flotas empresariales y cargadores individuales</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">China<span>Latam</span> Hub</a>
+          <p>20 años conectando fábricas de China con Latinoamérica. Especialistas en energía solar, electrolineras y almacenamiento.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="sourcing-b2b.html">Sourcing B2B</a></li>
+            <li><a href="energia-solar.html">Energía Solar</a></li>
+            <li><a href="electrolineras.html">Electrolineras</a></li>
+            <li><a href="almacenamiento-energia.html">Almacenamiento</a></li>
+            <li><a href="whatsapp-marketing.html">WhatsApp Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/8618826422530" target="_blank">WhatsApp</a></li>
+            <li><a href="mailto:niko@cknenergi.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ChinaLatam Hub</span>
+        <span>Cargadores DC & Electrolineras · China → Latinoamérica</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Services China → Latinoamérica | Sourcing, Energía Solar, Electrolineras</title>
+  <meta name="description" content="Operación de sourcing desde China a México, Colombia y Estados Unidos. Sourcing B2B, energía solar fotovoltaica, electrolineras y sistemas de almacenamiento de energía.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #0a2540;
+      --color-primary-light: #143d66;
+      --color-accent: #e67e22;
+      --color-accent-dark: #d35400;
+      --color-bg: #f8f9fa;
+      --color-white: #ffffff;
+      --color-text: #2c3e50;
+      --color-text-light: #5a6c7d;
+      --color-border: #e2e8f0;
+      --color-success: #27ae60;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+      --radius: 8px;
+      --radius-lg: 12px;
+      --max-width: 1200px;
+      --transition: all 0.3s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--color-text);
+      background: var(--color-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
+
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 32px; border-radius: var(--radius); font-weight: 600;
+      font-size: 1rem; cursor: pointer; border: none; transition: var(--transition);
+      gap: 8px;
+    }
+    .btn-primary {
+      background: var(--color-accent); color: var(--color-white);
+      box-shadow: 0 4px 14px rgba(230,126,34,0.35);
+    }
+    .btn-primary:hover { background: var(--color-accent-dark); transform: translateY(-2px); }
+    .btn-secondary {
+      background: transparent; color: var(--color-white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+    .btn-outline {
+      background: transparent; color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+    .btn-outline:hover { background: var(--color-primary); color: var(--color-white); }
+    .btn-large { padding: 16px 40px; font-size: 1.1rem; }
+
+    /* Navigation */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,37,64,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--color-white); font-weight: 700; }
+    .logo span { color: var(--color-accent); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--color-accent); }
+    .nav-cta { display: none; }
+    .mobile-menu-btn { display: none; background: none; border: none; color: var(--color-white); font-size: 1.5rem; cursor: pointer; }
+
+    /* Hero */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, #0d2137 100%);
+      padding-top: 72px; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 150%;
+      background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(230,126,34,0.15); color: var(--color-accent);
+      padding: 8px 16px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px;
+      border: 1px solid rgba(230,126,34,0.2);
+    }
+    .hero h1 {
+      font-size: 3.2rem; color: var(--color-white); margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 .highlight { color: var(--color-accent); }
+    .hero p {
+      font-size: 1.25rem; color: rgba(255,255,255,0.75); margin-bottom: 40px; max-width: 540px;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex; gap: 40px; margin-top: 48px; padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-stat .number { font-size: 2rem; font-weight: 700; color: var(--color-accent); }
+    .hero-stat .label { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    .hero-visual { position: relative; }
+    .hero-card {
+      background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg);
+      padding: 32px; position: relative;
+    }
+    .hero-card-title { color: var(--color-white); font-size: 1.1rem; font-weight: 600; margin-bottom: 16px; }
+    .hero-card-item {
+      display: flex; align-items: center; gap: 12px; padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.7); font-size: 0.9rem;
+    }
+    .hero-card-item:last-child { border-bottom: none; }
+    .hero-icon { width: 32px; height: 32px; background: rgba(230,126,34,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+
+    /* Section styles */
+    .section { padding: 100px 0; }
+    .section-header { text-align: center; max-width: 700px; margin: 0 auto 64px; }
+    .section-label {
+      display: inline-block; color: var(--color-accent); font-weight: 600; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;
+    }
+    .section-title { font-size: 2.4rem; color: var(--color-primary); margin-bottom: 16px; }
+    .section-subtitle { font-size: 1.15rem; color: var(--color-text-light); }
+
+    .bg-light { background: var(--color-bg); }
+    .bg-dark { background: var(--color-primary); color: var(--color-white); }
+    .bg-dark .section-title { color: var(--color-white); }
+    .bg-dark .section-subtitle { color: rgba(255,255,255,0.7); }
+
+    /* Pain / Solution */
+    .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .pain-box { background: var(--color-white); border-radius: var(--radius-lg); padding: 40px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); }
+    .pain-box h3 { color: var(--color-primary); margin-bottom: 24px; font-size: 1.3rem; }
+    .pain-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--color-border); }
+    .pain-item:last-child { border-bottom: none; }
+    .pain-icon { width: 40px; height: 40px; background: #fdecea; color: #e74c3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .solution-icon { width: 40px; height: 40px; background: #e8f6ef; color: var(--color-success); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .pain-text h4 { font-size: 1rem; color: var(--color-text); margin-bottom: 4px; }
+    .pain-text p { font-size: 0.9rem; color: var(--color-text-light); }
+
+    /* Services */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+    .service-card {
+      background: var(--color-white); border-radius: var(--radius-lg); padding: 36px;
+      border: 1px solid var(--color-border); transition: var(--transition); cursor: pointer;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--color-accent); }
+    .service-icon {
+      width: 56px; height: 56px; background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+      border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; margin-bottom: 20px; color: var(--color-white);
+    }
+    .service-card h3 { font-size: 1.25rem; color: var(--color-primary); margin-bottom: 10px; }
+    .service-card p { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 16px; }
+    .service-tag {
+      display: inline-block; background: var(--color-bg); color: var(--color-text-light);
+      padding: 4px 12px; border-radius: 100px; font-size: 0.8rem; font-weight: 500; margin-right: 6px; margin-bottom: 6px;
+    }
+    .service-link { display: inline-flex; align-items: center; gap: 6px; color: var(--color-accent); font-weight: 600; font-size: 0.9rem; margin-top: 8px; }
+    .service-link:hover { gap: 10px; }
+
+    /* Diferenciadores */
+    .diff-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+    .diff-item .diff-number { font-size: 2.5rem; font-weight: 700; color: var(--color-accent); margin-bottom: 8px; }
+    .diff-item .diff-label { font-size: 1rem; font-weight: 600; color: var(--color-white); margin-bottom: 6px; }
+    .diff-item .diff-desc { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+
+    /* Proceso */
+    .steps { display: flex; justify-content: space-between; position: relative; }
+    .steps::before {
+      content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 3px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+      z-index: 0;
+    }
+    .step { position: relative; z-index: 1; text-align: center; flex: 1; max-width: 200px; }
+    .step-number {
+      width: 56px; height: 56px; background: var(--color-white); border: 3px solid var(--color-accent);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; font-weight: 700; color: var(--color-accent); margin: 0 auto 16px;
+      box-shadow: var(--shadow-md);
+    }
+    .step h4 { font-size: 1rem; color: var(--color-primary); margin-bottom: 6px; }
+    .step p { font-size: 0.85rem; color: var(--color-text-light); }
+
+    /* Lead Magnet */
+    .lead-magnet {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+      border-radius: var(--radius-lg); padding: 60px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .lead-magnet::before {
+      content: ''; position: absolute; top: -50%; right: -10%; width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(230,126,34,0.1) 0%, transparent 70%);
+    }
+    .lead-magnet h2 { color: var(--color-white); font-size: 2rem; margin-bottom: 12px; position: relative; }
+    .lead-magnet p { color: rgba(255,255,255,0.75); margin-bottom: 32px; position: relative; }
+    .lead-form {
+      display: flex; gap: 12px; justify-content: center; max-width: 540px; margin: 0 auto;
+      position: relative; flex-wrap: wrap;
+    }
+    .lead-form input {
+      flex: 1; min-width: 240px; padding: 14px 20px; border-radius: var(--radius);
+      border: none; font-size: 1rem; font-family: inherit;
+    }
+    .lead-form input::placeholder { color: #94a3b8; }
+
+    /* FAQ */
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--color-border); }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 0; cursor: pointer; font-weight: 600; color: var(--color-primary); font-size: 1.05rem;
+    }
+    .faq-question:hover { color: var(--color-accent); }
+    .faq-answer { padding-bottom: 24px; color: var(--color-text-light); font-size: 0.95rem; line-height: 1.7; }
+
+    /* CTA Final */
+    .cta-final { text-align: center; }
+    .cta-final h2 { font-size: 2.4rem; color: var(--color-primary); margin-bottom: 16px; }
+    .cta-final p { font-size: 1.15rem; color: var(--color-text-light); margin-bottom: 32px; }
+    .whatsapp-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25d366; color: var(--color-white); padding: 16px 32px;
+      border-radius: var(--radius); font-weight: 600; font-size: 1.1rem;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.3); transition: var(--transition);
+    }
+    .whatsapp-cta:hover { background: #1ebe57; transform: translateY(-2px); }
+
+    /* Footer */
+    .footer { background: #071524; color: rgba(255,255,255,0.6); padding: 60px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo { margin-bottom: 16px; display: inline-block; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 320px; }
+    .footer-col h4 { color: var(--color-white); font-size: 0.95rem; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a { font-size: 0.9rem; }
+    .footer-col a:hover { color: var(--color-accent); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero h1 { font-size: 2.4rem; }
+      .hero-visual { order: -1; }
+      .diff-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hero { min-height: auto; padding: 100px 0 60px; }
+      .hero h1 { font-size: 2rem; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      .section { padding: 60px 0; }
+      .section-title { font-size: 1.8rem; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .steps { flex-direction: column; align-items: center; gap: 32px; }
+      .steps::before { display: none; }
+      .diff-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .lead-magnet { padding: 40px 24px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.7rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .diff-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">China<span>Latam</span> Hub</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sourcing-b2b.html">Sourcing B2B</a></li>
+        <li><a href="energia-solar.html">Energía Solar</a></li>
+        <li><a href="electrolineras.html">Electrolineras</a></li>
+        <li><a href="almacenamiento-energia.html">Almacenamiento</a></li>
+        <li><a href="whatsapp-marketing.html">WhatsApp</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-primary nav-cta">Cotizar ahora</a>
+      <button class="mobile-menu-btn" aria-label="Menú">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">20 años en China. Exportación a México, Colombia y Estados Unidos.</div>
+          <h1>Sourcing industrial desde China.<br><span class="highlight">Operación completa.</span></h1>
+          <p>Operamos desde China con exportación a México, Colombia y Estados Unidos. Sourcing de productos, energía solar fotovoltaica, infraestructura de carga para vehículos eléctricos y sistemas de almacenamiento de energía.</p>
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary btn-large">Solicitar cotización gratuita</a>
+            <a href="#servicios" class="btn btn-secondary btn-large">Explorar servicios</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="number">20+</div>
+              <div class="label">Años en China</div>
+            </div>
+            <div class="hero-stat">
+              <div class="number">100+</div>
+              <div class="label">Contenedores exportados</div>
+            </div>
+            <div class="hero-stat">
+              <div class="number">3</div>
+              <div class="label">Países operando</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-title">Servicios</div>
+            <div class="hero-card-item">
+              <div class="hero-icon">📦</div>
+              <div>Sourcing & compras consolidadas B2B</div>
+            </div>
+            <div class="hero-card-item">
+              <div class="hero-icon">☀️</div>
+              <div>Plantas solares y alumbrado público</div>
+            </div>
+            <div class="hero-card-item">
+              <div class="hero-icon">⚡</div>
+              <div>Electrolineras y cargadores DC</div>
+            </div>
+            <div class="hero-card-item">
+              <div class="hero-icon">🔋</div>
+              <div>Sistemas de almacenamiento BESS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS INTEGRALES -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Servicios</span>
+        <h2 class="section-title">Operación integral de importación</h2>
+        <p class="section-subtitle">Cobertura completa desde la fábrica en China hasta la entrega en tu bodega.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-box">
+          <h3>Sourcing & Producción</h3>
+          <div class="pain-item">
+            <div class="solution-icon">✓</div>
+            <div class="pain-text">
+              <h4>Búsqueda y validación de proveedores</h4>
+              <p>Identificación de fabricantes, auditoría en planta, verificación de certificados y capacidad de producción.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="solution-icon">✓</div>
+            <div class="pain-text">
+              <h4>Control de calidad pre-embarque</h4>
+              <p>Inspección por muestreo AQL o al 100%. Reporte fotográfico y documentación de hallazgos antes del embarque.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="solution-icon">✓</div>
+            <div class="pain-text">
+              <h4>Desarrollo de producto bajo pedido</h4>
+              <p>Diseño personalizado, prototipado, ajuste de especificaciones y producción con marca propia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pain-box">
+          <h3>Logística & Entrega</h3>
+          <div class="pain-item">
+            <div class="solution-icon">✓</div>
+            <div class="pain-text">
+              <h4>Flete marítimo y aéreo</h4>
+              <p>Coordinación de transporte internacional, consolidación de carga y seguro de mercancía.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="solution-icon">✓</div>
+            <div class="pain-text">
+              <h4>Gestión aduanera</h4>
+              <p>Elaboración de documentación comercial, clasificación arancelaria y coordinación con agentes aduaneros locales.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="solution-icon">✓</div>
+            <div class="pain-text">
+              <h4>Transporte local y entrega final</h4>
+              <p>Distribución desde puerto hasta bodega del cliente. Seguimiento de entrega y confirmación de recepción.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Nuestros departamentos</span>
+        <h2 class="section-title">Cuatro áreas de negocio, una sola conexión con China</h2>
+        <p class="section-subtitle">Cada departamento está especializado y opera con proveedores validados directamente en fábrica.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Sourcing & Ventas B2B</h3>
+          <p>Buscamos, validamos y exportamos los productos que necesitas. Desde iluminación LED hasta electrónica y herramientas. Compras consolidadas para reducir MOQ.</p>
+          <div>
+            <span class="service-tag">Iluminación LED</span>
+            <span class="service-tag">Electrónica</span>
+            <span class="service-tag">Herramientas</span>
+            <span class="service-tag">OEM</span>
+          </div>
+          <a href="sourcing-b2b.html" class="service-link">Cotizar productos →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">☀️</div>
+          <h3>Energías Renovables</h3>
+          <p>Plantas solares residenciales, comerciales e industriales. Alumbrado público solar sin obra civil. Participamos en licitaciones gubernamentales como EPC.</p>
+          <div>
+            <span class="service-tag">Fotovoltaico</span>
+            <span class="service-tag">Alumbrado público</span>
+            <span class="service-tag">Interconectado</span>
+            <span class="service-tag">Licitaciones</span>
+          </div>
+          <a href="energia-solar.html" class="service-link">Solicitar estudio →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Cargadores DC & Electrolineras</h3>
+          <p>Cargadores rápidos de 60kW a 360kW. Electrolineras turn-key con ingeniería, instalación y software de gestión OCPP. También para flotas empresariales.</p>
+          <div>
+            <span class="service-tag">Cargadores DC</span>
+            <span class="service-tag">Electrolineras</span>
+            <span class="service-tag">OCPP</span>
+            <span class="service-tag">Flotas EV</span>
+          </div>
+          <a href="electrolineras.html" class="service-link">Cotizar electrolinera →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔋</div>
+          <h3>Energy Storage & Híbridos</h3>
+          <p>Sistemas de almacenamiento LiFePO4 para respaldo, peak shaving y microgrids. Desde 5 kWh residenciales hasta contenedores BESS de 10 MWh para industria.</p>
+          <div>
+            <span class="service-tag">Baterías LiFePO4</span>
+            <span class="service-tag">Microgrids</span>
+            <span class="service-tag">BESS</span>
+            <span class="service-tag">Respaldo</span>
+          </div>
+          <a href="almacenamiento-energia.html" class="service-link">Simular ahorro →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIADORES -->
+  <section class="section bg-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" style="color: var(--color-accent)">Por qué nosotros</span>
+        <h2 class="section-title">Operación directa con fábricas.<br>Presencia física en China.</h2>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-item">
+          <div class="diff-number">20+</div>
+          <div class="diff-label">Años en China</div>
+          <div class="diff-desc">Relaciones directas con fábricas. Conocemos quién cumple y quién no.</div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-number">100+</div>
+          <div class="diff-label">Contenedores exportados</div>
+          <div class="diff-desc">Experiencia real en logística internacional China → México, Colombia, USA.</div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-number">1</div>
+          <div class="diff-label">Solo contacto</div>
+          <div class="diff-desc">Coordinación integral: sourcing, producción, flete, aduana y entrega final.</div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-number">5</div>
+          <div class="diff-label">Departamentos</div>
+          <div class="diff-desc">Especialización en energía, movilidad eléctrica, B2B y marketing digital.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section bg-light" id="proceso">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Cómo funciona</span>
+        <h2 class="section-title">De tu cotización a la entrega, en 5 pasos</h2>
+        <p class="section-subtitle">Proceso transparente, con seguimiento en cada etapa.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Nos contactas</h4>
+          <p>Nos cuentas qué producto o proyecto necesitas. Cotización en 24-48h.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Propuesta técnica</h4>
+          <p>Especificaciones, precio FOB/CIF, tiempos de entrega y términos de pago.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Producción & QC</h4>
+          <p>Supervisamos producción. Inspección de calidad antes del embarque.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Flete & Aduana</h4>
+          <p>Coordinamos envío marítimo/aéreo, documentación y despacho aduanero.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h4>Entrega & Soporte</h4>
+          <p>Transporte local hasta tu bodega. Garantía y soporte post-venta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-light" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Preguntas frecuentes</span>
+        <h2 class="section-title">Resolvemos tus dudas antes de importar</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Cuánto tiempo tarda un envío desde China a México o Colombia?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            El tiempo de tránsito marítimo desde los principales puertos de China (Shanghai, Shenzhen, Ningbo) a Lázaro Cárdenas o Manzanillo (México) es de aproximadamente 18-25 días. A Cartagena o Buenaventura (Colombia) es de 25-35 días. A esto debes sumar el tiempo de producción (15-45 días según producto) y el despacho aduanero en destino (3-7 días).
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Necesito una empresa constituida para importar?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            En México y Colombia sí se requiere estar dado de alta como importador ante la autoridad aduanera (SAT en México, DIAN en Colombia). Si aún no tienes esta figura, podemos conectarte con nuestros socios locales de importación y aduanas que pueden actuar como importador de registro mientras constituyes tu empresa.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Qué pasa si la mercancía llega defectuosa?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Realizamos inspección de calidad pre-embarque (tercer party inspection) con foto y video. Si el defecto es visible y reportado antes del embarque, se corrige en fábrica. Para productos con garantía (paneles solares, cargadores, baterías), nuestros proveedores ofrecen garantía de fabricante de 2 a 10 años según el equipo. Adicionalmente, aseguramos el cargamento durante el tránsito internacional.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Los equipos solares y cargadores DC tienen certificación para México/Colombia?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Trabajamos exclusivamente con fabricantes que cuentan con certificaciones internacionales (IEC, UL, CE) y que pueden gestionar la homologación local si es requerida (NOM en México, RETIE en Colombia). En cada propuesta técnica incluimos el estado de certificación del equipo para el país destino.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Cuál es el MOQ mínimo para pedir?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            El MOQ depende del producto y del proveedor. Para productos de iluminación y electrónica puede ser de 100-500 unidades. Para equipos de energía solar y cargadores DC, el MOQ suele ser de 1 unidad para modelos estándar. Ofrecemos servicio de compras consolidadas para que puedas combinar productos de diferentes proveedores en un solo contenedor y reducir costos de flete.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Pueden participar en licitaciones gubernamentales?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Sí. Participamos como EPC (Engineering, Procurement, Construction) o como proveedor de equipos en licitaciones de alumbrado público solar, plantas fotovoltaicas y proyectos de energía. Tenemos experiencia en el proceso de licitaciones en México (COMPRANET) y Colombia (SECOP). Podemos apoyar desde la elaboración de la propuesta técnica hasta el suministro e instalación.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section cta-final" id="contacto">
+    <div class="container">
+      <span class="section-label">Contacto</span>
+      <h2>Solicite cotización</h2>
+      <p>Envíe su consulta. Respuesta en 24 horas hábiles con propuesta técnica y comercial.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+        <a href="https://wa.me/8618826422530" target="_blank" class="whatsapp-cta">
+          Cotizar por WhatsApp
+        </a>
+        <a href="mailto:niko@cknenergi.com" class="btn btn-outline btn-large">Enviar email</a>
+      </div>
+      <p style="color: var(--color-text-light); font-size: 0.9rem;">
+        <a href="https://www.cknenergi.com" style="color: var(--color-accent); font-weight: 600;">www.cknenergi.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">China<span>Latam</span> Hub</a>
+          <p>20 años conectando fábricas de China con México, Colombia y Estados Unidos. Sourcing, energía solar, electrolineras y almacenamiento de energía.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="sourcing-b2b.html">Sourcing B2B</a></li>
+            <li><a href="energia-solar.html">Energía Solar</a></li>
+            <li><a href="electrolineras.html">Electrolineras</a></li>
+            <li><a href="almacenamiento-energia.html">Almacenamiento BESS</a></li>
+            <li><a href="whatsapp-marketing.html">WhatsApp Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Países</h4>
+          <ul>
+            <li><a href="#">🇲🇽 México</a></li>
+            <li><a href="#">🇨🇴 Colombia</a></li>
+            <li><a href="#">🇺🇸 Estados Unidos</a></li>
+            <li><a href="#">🇨🇳 China</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/8618826422530">WhatsApp</a></li>
+            <li><a href="mailto:niko@cknenergi.com">Email</a></li>
+            <li><a href="https://www.cknenergi.com">Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ChinaLatam Hub. Todos los derechos reservados.</span>
+        <span>ChinaLatam Hub</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
